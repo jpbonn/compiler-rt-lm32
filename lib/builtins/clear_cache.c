@@ -85,7 +85,9 @@
  */
 
 void __clear_cache(void *start, void *end) {
-#if __i386__ || __x86_64__
+#if __LM32__
+  asm("wcsr icc,r0");
+#elif __i386__ || __x86_64__
 /*
  * Intel processors have a unified instruction and data cache
  * so there is nothing to do
