@@ -13,7 +13,7 @@ OBJCOPY=lm32-elf-objcopy
 AR=lm32-elf-ar
 RANLIB=lm32-elf-ranlib
 
-CFLAGS := -ffreestanding -Wall -Werror -O3 -target lm32-elf -DKERNEL_USE 
+CFLAGS := -ffreestanding -Wall -Werror -O3 --target=lm32-elf -DKERNEL_USE 
 
 #
 # These functions were determined by:  make info-functions | egrep "lib/builtins)|lib/builtins "
